@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "HOGE1",
+    "ID": "HOGE1_001",
+    "Session": true,
+    "Login": true,
+    "LastRequestStatus": true
+  },
+  {
+    "Name": "HOGE2",
+    "ID": "HOGE2_001",
+    "Session": true,
+    "Login": true,
+    "LastRequestStatus": false
+  },
+  {
+    "Name": "HOGE2",
+    "ID": "HOGE2_002",
+    "Session": true,
+    "Login": true,
+    "LastRequestStatus": false
+  },
+  {
+    "Name": "HOGE3",
+    "ID": "HOGE2_002",
+    "Session": true,
+    "Login": true,
+    "LastRequestStatus": true
+  }
+]
