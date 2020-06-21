@@ -9,7 +9,7 @@ import (
 
 func TestStatusJSON_ReadFile(t *testing.T) {
 	status := statusAPI.NewStatus()
-	err := status.ReadFile(filepath.Join("testdata", "ajax.json"))
+	err := status.ReadFile(filepath.Join("testdata", "ajax.Json"))
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -14,11 +14,11 @@ func StatusPage(c echo.Context) error {
 }
 
 type Status struct {
-	Name              string `json:"Name"`
-	ID                string `json:"ID"`
-	Session           bool   `json:"Session"`
-	Login             bool   `json:"Login"`
-	LastRequestStatus bool   `json:"LastRequestStatus"`
+	Name              string `Json:"Name"`
+	ID                string `Json:"ID"`
+	Session           bool   `Json:"Session"`
+	Login             bool   `Json:"Login"`
+	LastRequestStatus bool   `Json:"LastRequestStatus"`
 }
 
 type StatusJSON []Status
@@ -46,19 +46,19 @@ func (s *StatusJSON) ReadFile(path string) error {
 }
 
 type StatusFactory struct {
-	path string
-	json StatusJSON
+	Path string
+	Json StatusJSON
 }
 
 func NewStatusFactory(path string) StatusFactory {
 	return StatusFactory{
-		path: path,
+		Path: path,
 	}
 }
 
 func (s StatusFactory) Handler(c echo.Context) error {
-	if err := s.json.ReadFile(s.path); err != nil {
-		return err
-	}
-	return c.JSON(http.StatusOK, s.json)
+	//if err := s.Json.ReadFile(s.Path); err != nil {
+	//	return err
+	//}
+	return c.JSON(http.StatusOK, s.Json)
 }
